@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const router = useRouter()
 
 interface BreadcrumbsItem {
   name: string
@@ -24,6 +23,7 @@ watch(
 )
 
 function buildBreadcrumbList() {
+  // Если путь / => открыта страница main
   if (route.fullPath.length === 1) {
     breadcrumbList.value = [
       {
@@ -35,6 +35,7 @@ function buildBreadcrumbList() {
     return
   }
 
+  // Создание нового массива "хлебных крошек", путем разбиения полного пути до открытой страницы
   breadcrumbList.value = route.fullPath.split('/').map((el, index, array) => {
     return {
       name: el || 'main',
