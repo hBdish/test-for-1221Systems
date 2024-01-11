@@ -67,7 +67,6 @@ function buildBreadcrumbList() {
   align-items: center;
   gap: 8px;
   height: 40px;
-  width: 100vw;
   font-size: large;
   border-bottom: 2px solid #a2a2a2;
 

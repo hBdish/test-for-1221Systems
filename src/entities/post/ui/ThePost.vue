@@ -11,10 +11,10 @@ defineProps<PostProps>()
 </script>
 
 <template>
-  <div @click="onPostClick" @click.right="onPostClickRight" :class="$style.post">
+  <article @click="onPostClick" @click.right="onPostClickRight" :class="$style.post">
     <h3>{{ post.title }}</h3>
     <span>{{ post.body }}</span>
-  </div>
+  </article>
 </template>
 
 <style module lang="scss">
