@@ -1,4 +1,4 @@
-import type {InjectionKey} from 'vue'
+import type { InjectionKey } from 'vue'
 
 // функция создания ключа для экшена с типизацией
 const createInjectionKeyForAction = <T, V = void>(key: string) => {

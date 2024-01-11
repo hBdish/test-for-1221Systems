@@ -41,7 +41,7 @@ const removePostOnClick = (post: Post) => (event: MouseEvent) => {
   gap: 16px;
   grid-template-columns: repeat(4, auto);
 
-  @media screen and (width < 600px) {
+  @media screen and (width < 760px) {
     gap: 8px;
     grid-template-columns: 1fr;
   }
